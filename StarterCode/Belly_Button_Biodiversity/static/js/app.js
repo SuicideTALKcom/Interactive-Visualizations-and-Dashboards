@@ -18,7 +18,7 @@ function buildMetadata(sample) {
 
   // Trig to calc meter point
   var degrees = 180 - (level*20),
-      radius = .8;
+      radius = .7;
   var radians = degrees * Math.PI / 180;
   var x = radius * Math.cos(radians);
   var y = radius * Math.sin(radians);
@@ -43,10 +43,10 @@ function buildMetadata(sample) {
       text: ['8-9','7-8','6-7','5-6', '4-5', '3-4', '2-3', '1-2', '0-1', ''],
       textinfo: 'text',
       textposition:'inside',
-      marker: {colors:['#F8F3ED','rgba(14, 127, 0, .5)', 'rgba(110, 154, 22, .5)',
+      marker: {colors:['#84B588','rgba(14, 127, 0, .5)', 'rgba(110, 154, 22, .5)',
                              'rgba(170, 202, 42, .5)', 'rgba(202, 209, 95, .5)',
                              'rgba(210, 206, 145, .5)', 'rgba(232, 226, 202, .5)',
-                             '#88BC8C','#84B588', 'rgba(255, 255, 255, 0)',]},
+                             '#F5F1E5','#F8F3EC', 'rgba(255, 255, 255, 0)',]},
       labels: ['8-9','7-8','6-7','5-6', '4-5', '3-4', '2-3', '1-2', '0-1', ''],
       hoverinfo: 'label',
       hole: .5,
@@ -90,7 +90,7 @@ function buildCharts(sample) {
       marker: {
           color: data.otu_ids,
           size: data.sample_values,
-          colorscale: "Earth"
+          colorscale: "Jet"
       }
   };
   var trace1 = [trace1];
